@@ -17,7 +17,7 @@ function App() {
     const address = process.env.CONTRACT_ADDRESS;
   
     if (!(await hasSigners()) && !(await requestAccount())) {
-        console.log("You are in trouble, no one wants to play");
+        console.log("no available account");
     }
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     const contract = new ethers.Contract(
