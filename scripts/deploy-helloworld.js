@@ -1,5 +1,5 @@
-import "@nomiclabs/hardhat-ethers";
-import { ethers } from "hardhat";
+require("@nomiclabs/hardhat-ethers");
+const { ethers } = require("hardhat");
 
 async function deployApp() {
   const HelloWorld = await ethers.getContractFactory("HelloWorld");
