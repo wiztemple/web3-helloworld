@@ -1,7 +1,7 @@
 require("@nomiclabs/hardhat-ethers");
 const { ethers } = require("hardhat");
 
-async function deployApp() {
+async function deployHellowWorld() {
   const HelloWorld = await ethers.getContractFactory("HelloWorld");
 
   const hello = await HelloWorld.deploy();
@@ -13,7 +13,7 @@ async function deployApp() {
   return hello
 }
 async function deploy() {
-  const hello = await deployApp();
+  const hello = await deployHellowWorld();
   
   return hello;
 }
